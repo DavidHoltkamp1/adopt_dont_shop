@@ -1,4 +1,4 @@
-<%= form_tag "/shelters", method: :post do %>
+<%= form_tag "/shelters/#{@shelter.id}", method: :patch do %>
   <%= label_tag "Name:" %>
   <%= text_field_tag :name %>
   <%= label_tag "Address:" %>
@@ -9,5 +9,5 @@
   <%= text_field_tag :state %>
   <%= label_tag "Zip:" %>
   <%= text_field_tag :zip %>
-  <%= submit_tag "Create Shelter" %>
+  <%= submit_tag "Update Shelter" %>
 <% end %>
