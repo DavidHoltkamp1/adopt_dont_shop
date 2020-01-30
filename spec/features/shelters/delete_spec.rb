@@ -17,6 +17,4 @@ RSpec.describe "shelter show page", type: :feature do
   expect(current_path).to eq("/shelters")
   expect(page).to_not have_content(@shelter1.name)
   end
-
-
 end
