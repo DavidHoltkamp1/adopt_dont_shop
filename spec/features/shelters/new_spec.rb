@@ -9,11 +9,11 @@ RSpec.describe "shelter index page", type: :feature do
     # expect(current_path).to eq(shelters_new_path)
     expect(current_path).to eq("/shelters/new")
 
-    fill_in "shelter[name]", with: "Davids Doggys"
-    fill_in "shelter[address]", with: "1234 ashby lane"
-    fill_in "shelter[city]", with: "Denver"
-    fill_in "shelter[state]", with: "CO"
-    fill_in "shelter[zip]", with: "80211"
+    fill_in :name, with: "Davids Doggys"
+    fill_in :address, with: "1234 ashby lane"
+    fill_in :city, with: "Denver"
+    fill_in :state, with: "CO"
+    fill_in :zip, with: "80211"
 
     click_on "Create Shelter"
 
