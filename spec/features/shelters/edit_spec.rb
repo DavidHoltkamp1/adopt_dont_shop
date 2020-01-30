@@ -27,5 +27,6 @@ RSpec.describe "shelter update", type: :feature do
     expect(current_path).to eq("/shelters/#{@shelter1.id}")
 
     expect(page).to have_content("Delightful Doggys")
+    expect(page).to_not have_content("80211")
   end
 end

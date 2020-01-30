@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get '/shelters/:id', to: 'shelters#show'
   get '/shelters/:id/edit', to: 'shelters#edit'
   patch '/shelters/:id', to: 'shelters#update'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  delete '/shelters/:id', to: 'shelters#destroy'
 end
