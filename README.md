@@ -140,7 +140,7 @@ Then I see the shelter with that id including the shelter's:
 User Story 4, Shelter Creation
 
 As a visitor
-When I visit the Shelter Index page
+When I visit the Shelter Indexpro page
 Then I see a link to create a new Shelter, "New Shelter"
 When I click this link
 Then I am taken to '/shelters/new' where I  see a form for a new shelter
@@ -273,7 +273,7 @@ User Story 11, Pet Update
 As a visitor
 When I visit a Pet Show page
 Then I see a link to update that Pet "Update Pet"
-When I click the link 
+When I click the link
 I am taken to '/pets/:id/edit' where I see a form to edit the pet's data including:
 - image
 - name
