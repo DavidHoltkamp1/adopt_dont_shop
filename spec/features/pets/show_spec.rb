@@ -30,6 +30,7 @@ RSpec.describe "pets show page", type: :feature do
     expect(page).to have_content(@pet1.name)
     expect(page).to have_content(@pet1.age)
     expect(page).to have_content(@pet1.sex)
+    expect(page).to have_content(@pet1.status)
     expect(page).to_not have_content(@pet2.name)
     expect(page).to_not have_css("img[src*='#{@pet2.image}']")
   end
