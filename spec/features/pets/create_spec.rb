@@ -45,5 +45,6 @@ RSpec.describe "create pet from shelter pets index page" do
     expect(page).to have_content(new_pet.age)
     expect(page).to have_content(new_pet.sex)
     expect(new_pet.status).to eq("Adoptable")
+    expect(page).to_not have_content(@pet2.name)
   end
 end
