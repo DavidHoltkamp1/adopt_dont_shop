@@ -1,9 +1,12 @@
 <h1>All Pets</h1>
 
 <% @pets.each do |pet| %>
-  <p><%= image_tag(pet.image, size: "200") %></p>
-  <p><%= pet.name %></p>
-  <p><%= pet.age %></p>
-  <p><%= pet.sex %></p>
-  <p><%= pet.shelter.name %></p>
+  <p><%= image_tag(pet.image, size: "200") %><br>
+    <%= link_to "Update Pet", "/pets/#{pet.id}/edit" %><br>
+    <%= link_to "Delete Pet", "/pets/#{pet.id}", method: :delete %>
+  </p>
+  <p>Doggy Name: <%= link_to "#{pet.name}", "/pets/#{pet.id}" %></p>
+  <p>Age: <%= pet.age %></p>
+  <p>Sex: <%= pet.sex %></p>
+  <p><%= link_to "#{pet.shelter.name}", "shelters/#{pet.shelter.id}" %></p>
 <% end %>

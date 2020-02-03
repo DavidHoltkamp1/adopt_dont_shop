@@ -1,13 +1,16 @@
 <h1>All Available Good Dogs</h1>
 
-<h2><%= @shelter.name %></h2>
+<h2><%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}" %></h2>
 
 
 <% @shelter.pets.each do |pet| %>
-  <p><%= image_tag(pet.image, size: "200") %></p>
-  <p><%= pet.name %></p>
-  <p><%= pet.age %></p>
-  <p><%= pet.sex %></p>
+  <p><%= image_tag(pet.image, size: "200") %>
+    <%= link_to "Update Pet", "/pets/#{pet.id}/edit" %><br>
+    <%= link_to "Delete Pet", "/pets/#{pet.id}", method: :delete %>
+  </p>
+  <p>Name: <%= link_to "#{pet.name}", "/pets/#{pet.id}" %></p>
+  <p>Age: <%= pet.age %></p>
+  <p>Sex: <%= pet.sex %></p>
 <% end %>
 
 <%= link_to 'Create Pet', "/shelters/#{@shelter.id}/pets/new" %>
